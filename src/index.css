@@ -1,0 +1,324 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 13%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 13%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 13%;
+
+    --primary: 240 76% 33%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 26%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 0 0% 13%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 91%;
+    --input: 0 0% 91%;
+    --ring: 240 76% 33%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 240 76% 6%;
+    --foreground: 0 0% 98%;
+
+    --card: 240 76% 6%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 76% 6%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 76% 6%;
+
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 18%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 43 96% 56%;
+    --accent-foreground: 240 76% 6%;
+
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 18%;
+    --input: 0 0% 18%;
+    --ring: 0 0% 83%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  font-family: 'Times New Roman', Times, serif;
+  font-feature-settings: "rlig" 1, "calt" 1;
+
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-gray-100;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-gold-500 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gold-600;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+
+  .glass-dark {
+    @apply bg-black/10 backdrop-blur-md border border-black/20;
+  }
+
+  .btn-primary {
+    @apply bg-gold-500 hover:bg-gold-600 text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-gold hover:shadow-gold-lg;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: width 0.6s, height 0.6s;
+    transform: translate(-50%, -50%);
+    z-index: 0;
+  }
+
+  .btn-primary:active::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .btn-secondary {
+    @apply border-2 border-gold-500 text-gold-500 hover:bg-gold-500 hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105;
+  }
+
+  .btn-ghost {
+    @apply text-gold-500 hover:text-gold-600 font-semibold px-4 py-2 transition-all duration-300 relative;
+  }
+
+  .btn-ghost::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: currentColor;
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+  }
+
+  .btn-ghost:hover::after {
+    width: 100%;
+  }
+
+  /* Typography Styles */
+  .heading-primary {
+    @apply font-playfair text-6xl md:text-8xl font-bold text-navy-900 leading-none tracking-tight;
+  }
+
+  .heading-secondary {
+    @apply font-playfair text-4xl md:text-6xl font-semibold text-navy-900 leading-tight;
+  }
+
+  .heading-tertiary {
+    @apply font-playfair text-2xl md:text-4xl font-medium text-navy-900 leading-tight;
+  }
+
+  .text-body {
+    @apply font-inter text-lg text-charcoal-700 leading-relaxed;
+  }
+
+  .text-caption {
+    @apply font-mono text-sm text-charcoal-600 uppercase tracking-wider;
+  }
+
+  /* Premium Card Styles */
+  .premium-card {
+    @apply bg-white rounded-2xl shadow-premium border border-gray-100 p-8 transition-all duration-300 hover:shadow-2xl hover:scale-105;
+  }
+
+  .glass-card {
+    @apply glass rounded-2xl p-8 transition-all duration-300 hover:bg-white/20;
+  }
+
+  /* Navigation Styles */
+  .nav-link {
+    @apply font-inter font-medium text-navy-900 hover:text-gold-500 transition-colors duration-300 relative;
+  }
+
+  .nav-link.active {
+    @apply text-gold-500;
+  }
+
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+  }
+
+  .nav-link:hover::after,
+  .nav-link.active::after {
+    width: 100%;
+  }
+
+  /* Animated Text Effects */
+  .text-typing {
+    border-right: 2px solid #d4af37;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 3s steps(40, end), blink 1s infinite;
+  }
+
+  .text-gold-glow {
+    animation: gold-glow 2s ease-in-out infinite;
+  }
+
+  /* Parallax Container */
+  .parallax-container {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 1px;
+  }
+
+  .parallax-element {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  .parallax-back {
+    transform: translateZ(-1px) scale(2);
+  }
+
+  .parallax-base {
+    transform: translateZ(0);
+  }
+
+  /* Loading and Transition States */
+  .fade-enter {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .fade-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+
+  /* Hover Effects */
+  .hover-lift {
+    @apply transition-all duration-300 hover:transform hover:scale-105 hover:shadow-2xl;
+  }
+
+  .hover-glow {
+    @apply transition-all duration-300 hover:shadow-gold;
+  }
+
+  /* Grid Layouts */
+  .masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    grid-auto-rows: max-content;
+  }
+
+  /* Section Spacing */
+  .section-padding {
+    @apply py-20 md:py-32;
+  }
+
+  .container-premium {
+    @apply container mx-auto px-6 lg:px-8;
+  }
+}
+
+@layer utilities {
+  /* Animation Delays */
+  .delay-100 {
+    animation-delay: 0.1s;
+  }
+  .delay-200 {
+    animation-delay: 0.2s;
+  }
+  .delay-300 {
+    animation-delay: 0.3s;
+  }
+  .delay-400 {
+    animation-delay: 0.4s;
+  }
+  .delay-500 {
+    animation-delay: 0.5s;
+  }
+
+  /* Text Gradient */
+  .text-gradient {
+    background: linear-gradient(135deg, #215A64 0%, #B38953 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Background Patterns */
+  .bg-pattern {
+    background-image: radial-gradient(circle at 25px 25px, rgba(212, 175, 55, 0.1) 2px, transparent 0);
+    background-size: 50px 50px;
+  }
+}
