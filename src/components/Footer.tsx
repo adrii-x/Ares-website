@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { Mail, Phone, MapPin, ArrowRight } from 'lucide-react';
 
 const Footer = () => {
+  const location = '15B, Borno Street, Area 10 Abuja, FCT, Nigeria'
   const footerSections = [
     {
       title: 'Company',
@@ -92,10 +93,15 @@ const Footer = () => {
                 <Phone size={16} className="group-hover:scale-110 transition-transform flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
                 <span className="whitespace-normal">{`+234 810 357 0156`}</span>
               </a>
-              <div className="flex items-start space-x-2 text-white/80 text-xs sm:text-sm md:text-base w-full md:w-auto">
-                <MapPin size={16} className="mt-1 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
-                <span className="whitespace-normal">{`15B, Borno Street, Area 10 Abuja, FCT, Nigeria`}</span>
-              </div>
+              <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${location}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start space-x-2 text-white/80 text-xs sm:text-sm md:text-base w-full md:w-auto hover:text-gold-400 transition-colors"
+                >
+                  <MapPin size={16} className="mt-1 flex-shrink-0 w-4 h-4 md:w-5 md:h-5" />
+                  <span className="whitespace-normal">{location}</span>
+                </a>
             </div>
           
 
@@ -116,6 +122,12 @@ const Footer = () => {
               <Link 
                 to={link.path}
                 className="text-white/70 hover:text-gold-400 transition-colors flex items-center group text-xs xs:text-sm sm:text-base md:text-lg"
+                onClick={() => {
+                  if (!link.path.includes('#')) {
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                  }
+                }}
+
               >
                 <span>{link.label}</span>
                 <ArrowRight 
@@ -134,7 +146,7 @@ const Footer = () => {
 
       {/* Bottom Section */}
       <div className="py-6 sm:py-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-        <div className="text-white/60 text-xs sm:text-sm text-center md:text-left">
+        <div className="text-white/60 text-xs sm:text-sm text-center md:text-left  whitespace-nowrap">
           © 2024 Tyche & Ares Ltd. All rights reserved.
         </div>
         <div className="flex flex-row justify-around md:justify-end space-x-4 sm:space-x-6 text-xs sm:text-sm w-full ">

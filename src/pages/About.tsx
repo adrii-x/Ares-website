@@ -77,7 +77,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission & Vision Section */}
       <section ref={sectionRef} className="py-16 sm:py-20 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16">
@@ -106,7 +105,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* D.O.M.E Canon Section */}
       <section className="py-16 sm:py-20 md:py-32 bg-navy-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
@@ -136,7 +134,6 @@ const About = () => {
         </div>
       </section>
 
-      {/* Company Creed */}
       <section className="py-16 sm:py-20 md:py-32 bg-gold-500">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <blockquote className="font-playfair text-2xl sm:text-3xl md:text-4xl lg:text-6xl font-bold text-navy-900 italic leading-tight px-4">

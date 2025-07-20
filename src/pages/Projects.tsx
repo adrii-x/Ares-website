@@ -11,13 +11,13 @@ const Projects = () => {
     {
       title: "Rural Communities Health Project (RCHP)",
       subtitle: "Revolutionizing Healthcare Access",
-      image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f",
+      image: "rchp.jpeg",
       description: "A comprehensive healthcare initiative bringing medical services directly to underserved rural communities across Nigeria.",
       stats: {
-        communities: "50+",
-        lives: "25,000+",
-        clinics: "15",
-        year: "2023"
+        communities: "1",
+        lives: "150+",
+        clinics: "3",
+        year: "2025"
       },
       details: [
         "Mobile clinic deployment",
@@ -29,7 +29,7 @@ const Projects = () => {
     {
       title: "Youth Leaders Bureau (YLB Inc.)",
       subtitle: "Empowering Tomorrow's Leaders",
-      image: "https://images.unsplash.com/photo-1511895426328-dc8714191300",
+      image: "ylb.jpeg",
       description: "Strategic youth development program creating pathways for leadership and civic engagement across Africa.",
       stats: {
         communities: "30+",
@@ -47,7 +47,7 @@ const Projects = () => {
     {
       title: "Meridian Sovereign Platform",
       subtitle: "Digital Governance Innovation",
-      image: "https://images.unsplash.com/photo-1551434678-e076c223a692",
+      image: "meridian.png",
       description: "Cutting-edge digital platform streamlining governance processes and enhancing citizen engagement.",
       stats: {
         communities: "100+",
@@ -73,7 +73,7 @@ const Projects = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hero-pattern z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40"
+            src="projects.jpeg"
             alt="Project Portfolio"
             className="w-full h-full object-cover"
           />
@@ -97,7 +97,6 @@ const Projects = () => {
             <h2 className="font-playfair text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-semibold text-navy-900 mb-6 sm:mb-8">Impact at Scale</h2>
           </div>
 
-          {/* Project Navigation */}
           <div className="flex flex-col sm:flex-row justify-center mb-8 sm:mb-12 gap-4">
             {projects.map((project, index) => (
               <button
@@ -114,7 +113,6 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Active Project Display */}
           <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 lg:gap-16 items-center">
             <div className="order-2 lg:order-1">
               <h3 className="font-playfair text-2xl sm:text-3xl md:text-4xl font-semibold text-navy-900 mb-3 sm:mb-4">
@@ -185,15 +183,15 @@ const Projects = () => {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-gold-500 mb-2">180+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-gold-500 mb-2">5+</div>
               <div className="text-white/80 text-sm sm:text-base">Communities Reached</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-gold-500 mb-2">535K+</div>
+              <div className="text-3xl sm:text-4xl font-bold text-gold-500 mb-2">180+</div>
               <div className="text-white/80 text-sm sm:text-base">Lives Transformed</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-gold-500 mb-2">23</div>
+              <div className="text-3xl sm:text-4xl font-bold text-gold-500 mb-2">1</div>
               <div className="text-white/80 text-sm sm:text-base">Active Facilities</div>
             </div>
             <div className="bg-white/10 backdrop-blur-md border border-white/20 rounded-2xl p-6 sm:p-8 text-center">

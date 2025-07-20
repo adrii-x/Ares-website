@@ -66,12 +66,11 @@ const Frameworks = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hero-pattern z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+            src="/thinkinng.webp"
             alt="Strategic Frameworks"
             className="w-full h-full object-cover"
           />
@@ -87,7 +86,6 @@ const Frameworks = () => {
         </div>
       </section>
 
-      {/* SEED Agenda Section */}
       <section className="section-padding">
         <div className="container-premium">
           <div className="text-center mb-16">
@@ -130,7 +128,6 @@ const Frameworks = () => {
         </div>
       </section>
 
-      {/* GATE Framework Section */}
       <section className="section-padding bg-gray-50">
         <div className="container-premium">
           <div className="text-center mb-16">
@@ -142,7 +139,6 @@ const Frameworks = () => {
           </div>
 
           <div className="relative max-w-6xl mx-auto">
-            {/* Gateway Visual */}
             <div className="text-center mb-16">
               <div className="inline-block relative">
                 <div className="w-32 h-32 border-4 border-gold-500 rounded-full flex items-center justify-center bg-white shadow-lg">
@@ -180,7 +176,6 @@ const Frameworks = () => {
         </div>
       </section>
 
-      {/* Theory in Action */}
       <section className="section-padding bg-navy-900">
         <div className="container-premium">
           <div className="text-center mb-16">

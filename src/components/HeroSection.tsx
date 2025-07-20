@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ArrowRight, Play } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 
 
@@ -87,18 +88,18 @@ const HeroSection = () => {
           </div>
         )}
 
+                    
 
-      {/* Video Background */}
+
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-hero-pattern z-10"></div>
         <img 
-          src="https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+          src="/Home_page.jpeg"
           alt="Modern Architecture"
           className="w-full h-full object-cover"
         />
       </div>
 
-      {/* Floating Particles */}
       <div className="absolute inset-0 z-10">
         {[...Array(20)].map((_, i) => (
           <div
@@ -114,7 +115,6 @@ const HeroSection = () => {
         ))}
       </div>
 
-      {/* Hero Content */}
       <div className="relative z-20 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
         <div className="mb-4 sm:mb-6 lg:mb-8">
        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-8xl font-playfair font-bold text-white mb-2 sm:mb-4 leading-none tracking-tight">
@@ -152,16 +152,27 @@ const HeroSection = () => {
           </h2>
         </div>
 
-        {/* CTA Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 lg:gap-6 justify-center items-center animate-fade-in-up delay-1300 px-6 max-w-4xl mx-auto">
-          <button className="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-white font-semibold px-4   sm: min-w-0 lg:px-8 py-3 lg:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-gold hover:shadow-gold-lg relative overflow-hidden group text-sm sm:text-base">
+          
+          
+          <Link to="/projects" 
+                onClick={() => {              
+                    window.scrollTo({ top: 0, behavior: 'smooth' });            
+                }}>
+            <button className="w-full sm:w-auto bg-gold-500 hover:bg-gold-600 text-white font-semibold px-4   sm: min-w-0 lg:px-8 py-3 lg:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-gold hover:shadow-gold-lg relative overflow-hidden group text-sm sm:text-base">
             <span className="flex items-center justify-center relative z-10">
               <span className="hidden sm:inline">Explore Our Projects</span>
               <span className="sm:hidden">Our Projects</span>
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
             </span>
-          </button>
-          
+            </button>
+        
+          </Link>
+
+        <Link to="/frameworks"
+         onClick={() => {              
+                    window.scrollTo({ top: 0, behavior: 'smooth' });            
+                }}>
           <button className="w-full sm:w-auto border-2 border-gold-500 text-white hover:bg-gold-500 hover:border-transparent hover:text-navy-900 font-semibold px-4 sm:px-6 lg:px-8 py-3 lg:py-4 rounded-lg transition-all duration-300 transform hover:scale-105 group text-sm sm:text-base">
             <span className="flex items-center justify-center">
               <span className="hidden sm:inline">Join the SEED Agenda</span>
@@ -169,19 +180,23 @@ const HeroSection = () => {
               <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" size={18} />
             </span>
           </button>
-          
+        </Link>
+
+        <Link to="/media"
+         onClick={() => {              
+                    window.scrollTo({ top: 0, behavior: 'smooth' });            
+                }}>
           <button className="w-full sm:w-auto text-white hover:text-gold-600 font-semibold px-3 sm:px-4 py-2 transition-all duration-300 relative group flex items-center justify-center text-sm sm:text-base">
             <Play className="mr-2 group-hover:scale-110 transition-transform" size={18} />
             <span className="hidden sm:inline">Watch Our Story</span>
             <span className="sm:hidden">Our Story</span>
           </button>
+        </Link>
         </div>
 
-        {/* Scroll Indicator */}
         
       </div>
 
-      {/* Background Elements */}
       <div className="absolute inset-0 z-5 bg-gradient-to-br from-navy-900/20 via-transparent to-charcoal-900/30"></div>
     </section>
   );

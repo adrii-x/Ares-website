@@ -4,6 +4,48 @@ import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Mail, Phone, MapPin, Send, Clock, Calendar } from 'lucide-react';
 
+
+const location = '15B, Borno Street, Area 10 Abuja, FCT, Nigeria';
+
+export  function ContactMapSection() {
+  return (
+    <div className="bg-white rounded-2xl  shadow-premium">
+      <div className="relative aspect-[16/7] rounded-lg overflow-hidden">
+
+        {/* Embedded Google Map */}
+        <iframe
+          src={`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=${encodeURIComponent(location)}`}
+          allowFullScreen
+          loading="lazy"
+          className="w-full h-full border-0"
+        ></iframe>
+
+        {/* Overlay that makes map clickable */}
+        <a
+          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="absolute inset-0 z-10"
+        ></a>
+
+        {/* Map control buttons */}
+        <div className="absolute bottom-4 right-4 z-20 flex gap-2">
+          <button className="bg-white shadow rounded-full p-2 hover:bg-gray-100 text-xs">
+            🔍+
+          </button>
+          <button className="bg-white shadow rounded-full p-2 hover:bg-gray-100 text-xs">
+            🔍−
+          </button>
+          <button className="bg-white shadow rounded-full p-2 hover:bg-gray-100 text-xs">
+            ↔️
+          </button>
+        </div>
+
+      </div>
+    </div>
+  );
+}
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -14,7 +56,6 @@ const Contact = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
     console.log('Form submitted:', formData);
   };
 
@@ -59,12 +100,11 @@ const Contact = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hero-pattern z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+            src="/contact us.jpg"
             alt="Contact Us"
             className="w-full h-full object-cover"
           />
@@ -80,11 +120,9 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section className="section-padding">
         <div className="container-premium">
           <div className="grid lg:grid-cols-2 gap-16">
-            {/* Contact Form */}
             <div>
               <h3 className="text-caption text-gold-500 mb-4">GET IN TOUCH</h3>
               <h2 className="heading-tertiary mb-8">Send Us a Message</h2>
@@ -169,14 +207,24 @@ const Contact = () => {
                   </span>
                 </button>
               </form>
+
+        <div className=" mx-0">
+          <div className="text-center mt-10 ">
+
+          </div>
+
+          <div className="bg-white rounded-2xl  shadow-premium">
+            <ContactMapSection/>
+          </div>
+        </div>
+
             </div>
 
-            {/* Contact Information */}
             <div>
               <h3 className="text-caption text-gold-500 mb-4">CONTACT INFORMATION</h3>
               <h2 className="heading-tertiary mb-8">Reach Out to Us</h2>
               
-              <div className="space-y-8">
+              <div className="space-y-10">
                 {contactInfo.map((info, index) => (
                   <div key={index} className="flex items-start space-x-4">
                     <div className="w-12 h-12 bg-gold-100 rounded-lg flex items-center justify-center flex-shrink-0">
@@ -184,14 +232,33 @@ const Contact = () => {
                     </div>
                     <div>
                       <h4 className="font-semibold text-navy-900 mb-1">{info.title}</h4>
-                      <p className="text-lg text-charcoal-700 mb-1">{info.details}</p>
+                      {
+                      (info.details.includes('tycheandaresltd@gmail.com'))?(
+                        <a href={`mailto:${info.details}`} className="text-gold-500 hover:underline">
+                          {info.details}
+                        </a>):
+                      (info.details.includes('+234')) ?
+                        (<a href={`tel:${info.details}`} className="text-gold-500 hover:underline">
+                          {info.details}
+                        </a>)
+                       :
+                        <a 
+                        href={`https://www.google.com/maps/search/?api=1&query=${info.details}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-gold-500 hover:underline">
+                          {info.details}
+                        </a>
+                        
+                      
+                    }
                       <p className="text-sm text-charcoal-600">{info.description}</p>
                     </div>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-12 p-6 bg-gray-50 rounded-2xl">
+              <div className="mt-14 p-6 bg-gray-50 rounded-2xl">
                 <h4 className="font-semibold text-navy-900 mb-4 flex items-center">
                   <Clock className="mr-2 text-gold-500" size={20} />
                   Business Hours
@@ -212,7 +279,7 @@ const Contact = () => {
                 </div>
               </div>
 
-              <div className="mt-8 p-6 bg-gold-50 rounded-2xl">
+              <div className="mt-10 p-6 bg-gold-50 rounded-2xl">
                 <h4 className="font-semibold text-navy-900 mb-4 flex items-center">
                   <Calendar className="mr-2 text-gold-500" size={20} />
                   Schedule a Meeting
@@ -225,32 +292,13 @@ const Contact = () => {
                 </button>
               </div>
             </div>
+
+
           </div>
         </div>
       </section>
 
-      {/* Map Section */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-premium">
-          <div className="text-center mb-16">
-            <h3 className="text-caption text-gold-500 mb-4">FIND US</h3>
-            <h2 className="heading-secondary mb-8">Our Location</h2>
-          </div>
 
-          <div className="bg-white rounded-2xl p-8 shadow-premium">
-            <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="text-gold-500 mx-auto mb-4" size={48} />
-                <h4 className="text-xl font-semibold text-navy-900 mb-2">Interactive Map</h4>
-                <p className="text-charcoal-600">15B, Borno Street, Area 10, Abuja, FCT, Nigeria</p>
-                <button className="mt-4 text-gold-600 hover:text-gold-700 font-semibold">
-                  Get Directions →
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

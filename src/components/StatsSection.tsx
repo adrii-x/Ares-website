@@ -1,4 +1,6 @@
 
+
+import { Link } from 'react-router-dom';
 import React, { useEffect, useRef, useState } from 'react';
 
 const StatsSection = () => {
@@ -12,9 +14,9 @@ const StatsSection = () => {
   });
 
   const finalStats = {
-    projects: 50,
-    communities: 100000,
-    partners: 25,
+    projects: 5,
+    communities: 100,
+    partners: 5,
     years: 5
   };
 
@@ -96,10 +98,8 @@ const StatsSection = () => {
 
   return (
     <section ref={sectionRef} className="section-padding bg-navy-900 relative overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 bg-pattern opacity-10"></div>
       
-      {/* Gold Accent Lines */}
       <div className="absolute top-0 left-0 w-full h-1 bg-gold-gradient"></div>
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gold-gradient"></div>
 
@@ -140,18 +140,25 @@ const StatsSection = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
         <div className={`text-center mt-16 ${isVisible ? 'animate-fade-in-up' : 'opacity-0'}`} style={{ animationDelay: '0.8s' }}>
           <p className="text-xl text-white/90 mb-8">
             Ready to be part of Africa's transformation story?
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="btn-primary">
+           <Link to="/projects" className="btn-primary" >
+            <button onClick={() => {window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}>
               View Our Projects
             </button>
-            <button className="btn-secondary">
+            </Link>
+
+
+      <Link to="/about"  className="btn-secondary" > 
+            <button onClick={() => {window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}>
               Join Our Mission
             </button>
+      </Link>
           </div>
         </div>
       </div>

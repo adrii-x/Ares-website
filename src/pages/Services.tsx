@@ -100,7 +100,7 @@ const Services = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hero-pattern z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c"
+            src="/services.jpeg"
             alt="Strategic Services"
             className="w-full h-full object-cover"
           />

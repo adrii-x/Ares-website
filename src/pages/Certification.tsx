@@ -160,7 +160,7 @@ const Certifications = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hero-pattern z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1487958449943-2429e8be8625"
+            src="/alliance.jpeg"
             alt="Validated Excellence"
             className="w-full h-full object-cover"
           />

@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
 import { Briefcase, GraduationCap, Heart, ArrowRight, MapPin, Clock, Users } from 'lucide-react';
-
+import { Link } from 'react-router-dom';
 const Careers = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
@@ -112,7 +112,7 @@ const Careers = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hero-pattern z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+            src="/career.webp"
             alt="Join Our Team"
             className="w-full h-full object-cover"
           />
@@ -267,9 +267,13 @@ const Careers = () => {
           <p className="text-xl text-navy-700 mb-12 max-w-2xl mx-auto">
             Take the first step towards joining Africa's premier civic architecture and strategic project management firm.
           </p>
+            <Link to="/contact" 
+                  onClick={() => {window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}>
           <button className="bg-navy-900 text-white hover:bg-navy-800 font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">
             Apply Now
           </button>
+            </Link>
         </div>
       </section>
 

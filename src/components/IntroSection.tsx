@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom';
 import React, { useEffect, useRef, useState } from 'react';
 import { Building2, Users, Target, Globe } from 'lucide-react';
 
@@ -76,10 +77,13 @@ const IntroSection = () => {
             </div>
 
             <div className="pt-6">
-              <button className="btn-primary">
+              <Link  to="/projects" 
+                      onClick={() => {window.scrollTo({ top: 0, behavior: 'smooth' });
+          }}
+                      className="btn-primary">
                 Discover Our Vision
                 <span className="ml-2">→</span>
-              </button>
+              </Link>
             </div>
           </div>
 

@@ -2,6 +2,7 @@
 import React from 'react';
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
+import {Link} from 'react-router-dom';
 import { Building, Users, Globe, Handshake, Star, MapPin } from 'lucide-react';
 
 const Partners = () => {
@@ -108,7 +109,7 @@ const Partners = () => {
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hero-pattern z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+            src="partner.jpeg"
             alt="Our Alliance"
             className="w-full h-full object-cover"
           />
@@ -217,9 +218,14 @@ const Partners = () => {
             Partner with us to create lasting impact across Africa through strategic development initiatives.
           </p>
           <div className="flex flex-col sm:flex-row gap-6 justify-center">
-            <button className="bg-navy-900 text-white hover:bg-navy-800 font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">
-              Become a Partner
-            </button>
+                      <Link  to="/projects" 
+                                  onClick={() => {window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}>
+                          <button className="bg-navy-900 text-white hover:bg-navy-800 font-semibold px-8 py-4 rounded-lg transition-all duration-300 transform hover:scale-105">
+                          Become a Partner
+                        </button>
+                      </Link>
+
             <button className="border-2 border-navy-900 text-navy-900 hover:bg-navy-900 hover:text-white font-semibold px-8 py-4 rounded-lg transition-all duration-300">
               Learn More
             </button>

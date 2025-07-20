@@ -10,20 +10,20 @@ const Media = () => {
   const mediaContent = {
     insights: [
       {
-        type: 'article',
-        title: "The Future of Civic Architecture in Africa",
-        excerpt: "How strategic infrastructure design can transform entire communities and create lasting social change.",
+        type: 'brief',
+        title: "The Seed Gate",
+        excerpt: "A 21st-Century Compass for a new standard of leadership that prioritizes the inalienable conditions without which no person can thrive, and no nation can prosper.",
         readTime: "8 min read",
         date: "Dec 15, 2024",
-        image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+        image: "/ares_blue.jpeg"
       },
       {
         type: 'whitepaper',
-        title: "SEED Agenda Implementation Guide",
+        title: "The SEED Project & The GATE Framework",
         excerpt: "A comprehensive framework for implementing sustainable, equitable development projects across Africa.",
         readTime: "25 min read",
         date: "Nov 28, 2024",
-        image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d"
+        image: "/ares_blue.jpeg"
       },
       {
         type: 'brief',
@@ -31,7 +31,7 @@ const Media = () => {
         excerpt: "Executive brief on integrating young voices into policy-making and civic decision processes.",
         readTime: "12 min read",
         date: "Nov 10, 2024",
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f"
+        image: "/ares_blue.jpeg"
       }
     ],
     interviews: [
@@ -100,12 +100,11 @@ const Media = () => {
     <div className="min-h-screen bg-white">
       <Navigation />
       
-      {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <div className="absolute inset-0 bg-hero-pattern z-10"></div>
           <img 
-            src="https://images.unsplash.com/photo-1504711434969-e33886168f5c"
+            src="media.jpeg"
             alt="Media Center"
             className="w-full h-full object-cover"
           />
@@ -121,10 +120,8 @@ const Media = () => {
         </div>
       </section>
 
-      {/* Content Section */}
       <section className="section-padding">
         <div className="container-premium">
-          {/* Tab Navigation */}
           <div className="flex flex-wrap justify-center gap-4 mb-16">
             {tabs.map((tab) => (
               <button
