@@ -5,42 +5,22 @@ import Footer from '../components/Footer';
 import { Mail, Phone, MapPin, Send, Clock, Calendar } from 'lucide-react';
 
 
-const location = '15B, Borno Street, Area 10 Abuja, FCT, Nigeria';
+
+
 
 export  function ContactMapSection() {
+  const location = '15B, Borno Street, Area 10 Abuja, FCT, Nigeria';
+  
   return (
-    <div className="bg-white rounded-2xl  shadow-premium">
+    <div className="bg-white rounded-2xl shadow-premium">
       <div className="relative aspect-[16/7] rounded-lg overflow-hidden">
-
-        {/* Embedded Google Map */}
+        {/* Simple Google Maps link */}
         <iframe
-          src={`https://www.google.com/maps/embed/v1/place?key=YOUR_GOOGLE_MAPS_API_KEY&q=${encodeURIComponent(location)}`}
+          src={`https://maps.google.com/maps?q=${encodeURIComponent(location)}&output=embed`}
           allowFullScreen
           loading="lazy"
           className="w-full h-full border-0"
         ></iframe>
-
-        {/* Overlay that makes map clickable */}
-        <a
-          href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(location)}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute inset-0 z-10"
-        ></a>
-
-        {/* Map control buttons */}
-        <div className="absolute bottom-4 right-4 z-20 flex gap-2">
-          <button className="bg-white shadow rounded-full p-2 hover:bg-gray-100 text-xs">
-            🔍+
-          </button>
-          <button className="bg-white shadow rounded-full p-2 hover:bg-gray-100 text-xs">
-            🔍−
-          </button>
-          <button className="bg-white shadow rounded-full p-2 hover:bg-gray-100 text-xs">
-            ↔️
-          </button>
-        </div>
-
       </div>
     </div>
   );

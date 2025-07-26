@@ -3,7 +3,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Award, Building, FileText, GraduationCap, Filter, Calendar, Grid3X3, List } from 'lucide-react';
+import { Award, Building, FileText, GraduationCap, Filter, Calendar, Grid3X3, List , Shield} from 'lucide-react';
 
 const Certifications = () => {
   const [filter, setFilter] = useState('all');
@@ -16,107 +16,147 @@ const Certifications = () => {
   });
 
   const certifications = [
+
+  
     {
       id: 1,
-      title: 'Ministry of Infrastructure Partnership Agreement',
-      category: 'agreements',
-      year: 2023,
-      type: 'Government Partnership',
-      description: 'Comprehensive partnership agreement with the Ministry of Infrastructure for national development projects.',
-      impact: 'Enables participation in $2.5B infrastructure program',
-      icon: Building
+      title: 'SCUML Certificate of Registration',
+      category: 'certifications',
+      year: 2025,
+      type: 'Regulatory Compliance',
+      description: 'Registered by SCUML, adhering to the Money Laundering Act, 2022.',
+      impact: 'Demonstrates compliance with anti-money laundering regulations in Nigeria.',
+      icon: Shield
     },
+
+
     {
       id: 2,
-      title: 'PAIGAS Corporate Alliance Contract',
-      category: 'agreements',
-      year: 2023,
-      type: 'Corporate Alliance',
-      description: 'Strategic alliance with PAIGAS for energy infrastructure development across multiple regions.',
-      impact: 'Access to renewable energy projects worth $500M',
-      icon: FileText
+      title: 'Certificate of Incorporation',
+      category: 'validations',
+      year: 2024,
+      type: 'Corporate Registration',
+      description: 'Incorporated by CAC under Companies and Allied Matters Act 2020',
+      impact: 'Establishes us as a legally recognized entity in Nigeria',
+      icon: Building
     },
     {
       id: 3,
-      title: 'Municipal Development Consortium',
-      category: 'agreements',
-      year: 2022,
-      type: 'Municipal Contract',
-      description: 'Lead contractor agreement for smart city development in 15 metropolitan areas.',
-      impact: 'Managing urban development for 2.3M residents',
-      icon: Building
-    },
-    {
-      id: 4,
-      title: 'International Sustainable Development Alliance',
-      category: 'agreements',
+      title: 'Taxpayer Identification Number (TIN) Certificate',
+      category: 'validations',
       year: 2024,
-      type: 'International Collaboration',
-      description: 'Partnership with UN-Habitat for sustainable urban development initiatives.',
-      impact: 'Contributing to global sustainability goals',
-      icon: Award
-    },
-    {
-      id: 5,
-      title: 'Civic Architecture Excellence Certification',
-      category: 'certifications',
-      year: 2023,
-      type: 'Industry Accreditation',
-      description: 'Premium certification in civic architecture and public space design.',
-      impact: 'Qualified for Tier 1 government projects',
-      icon: Award
-    },
-    {
-      id: 6,
-      title: 'Project Management Professional (PMP)',
-      category: 'certifications',
-      year: 2022,
-      type: 'Professional Credential',
-      description: 'Advanced project management certification for large-scale infrastructure projects.',
-      impact: 'Enhanced project delivery capabilities',
+      type: 'Tax Registration',
+      description: 'Received TIN 1073069781 from JTB on January 30, 2024',
+      impact: 'Enables fulfillment of tax obligations in Nigeria.',
       icon: FileText
     },
-    {
-      id: 7,
-      title: 'Strategic Planning Excellence Award',
-      category: 'certifications',
-      year: 2024,
-      type: 'Recognition Award',
-      description: 'Recognition for outstanding strategic planning in urban development projects.',
-      impact: 'Industry leadership recognition',
-      icon: Award
-    },
-    {
-      id: 8,
-      title: 'University Research Partnership Certificate',
-      category: 'validations',
-      year: 2023,
-      type: 'Academic Partnership',
-      description: 'Formal research partnership with leading engineering universities.',
-      impact: 'Access to cutting-edge research and talent',
-      icon: GraduationCap
-    },
-    {
-      id: 9,
-      title: 'International Engineering Summit Certification',
-      category: 'validations',
-      year: 2024,
-      type: 'Summit Participation',
-      description: 'Certified participation and presentation at the World Engineering Summit.',
-      impact: 'Global thought leadership recognition',
-      icon: Award
-    },
-    {
-      id: 10,
-      title: 'Educational Program Accreditation',
-      category: 'validations',
-      year: 2022,
-      type: 'Program Certification',
-      description: 'Accredited training programs for next-generation engineers.',
-      impact: 'Training 500+ engineers annually',
-      icon: GraduationCap
-    }
+   
   ];
+
+
+
+  // const certifications = [
+  //   {
+  //     id: 1,
+  //     title: 'Ministry of Infrastructure Partnership Agreement',
+  //     category: 'agreements',
+  //     year: 2023,
+  //     type: 'Government Partnership',
+  //     description: 'Comprehensive partnership agreement with the Ministry of Infrastructure for national development projects.',
+  //     impact: 'Enables participation in $2.5B infrastructure program',
+  //     icon: Building
+  //   },
+  //   {
+  //     id: 2,
+  //     title: 'PAIGAS Corporate Alliance Contract',
+  //     category: 'agreements',
+  //     year: 2023,
+  //     type: 'Corporate Alliance',
+  //     description: 'Strategic alliance with PAIGAS for energy infrastructure development across multiple regions.',
+  //     impact: 'Access to renewable energy projects worth $500M',
+  //     icon: FileText
+  //   },
+  //   {
+  //     id: 3,
+  //     title: 'Municipal Development Consortium',
+  //     category: 'agreements',
+  //     year: 2022,
+  //     type: 'Municipal Contract',
+  //     description: 'Lead contractor agreement for smart city development in 15 metropolitan areas.',
+  //     impact: 'Managing urban development for 2.3M residents',
+  //     icon: Building
+  //   },
+  //   {
+  //     id: 4,
+  //     title: 'International Sustainable Development Alliance',
+  //     category: 'agreements',
+  //     year: 2024,
+  //     type: 'International Collaboration',
+  //     description: 'Partnership with UN-Habitat for sustainable urban development initiatives.',
+  //     impact: 'Contributing to global sustainability goals',
+  //     icon: Award
+  //   },
+  //   {
+  //     id: 5,
+  //     title: 'SCUML Certificate of Registration',
+  //     category: 'certifications',
+  //     year: 2025,
+  //     type: 'Regulatory Compliance',
+  //     description: 'Registered by SCUML, adhering to the Money Laundering Act, 2022.',
+  //     impact: 'Demonstrates compliance with anti-money laundering regulations in Nigeria.',
+  //     icon: Shield
+  //   },
+  //   {
+  //     id: 6,
+  //     title: 'Project Management Professional (PMP)',
+  //     category: 'certifications',
+  //     year: 2022,
+  //     type: 'Professional Credential',
+  //     description: 'Advanced project management certification for large-scale infrastructure projects.',
+  //     impact: 'Enhanced project delivery capabilities',
+  //     icon: FileText
+  //   },
+  //   {
+  //     id: 7,
+  //     title: 'Strategic Planning Excellence Award',
+  //     category: 'certifications',
+  //     year: 2024,
+  //     type: 'Recognition Award',
+  //     description: 'Recognition for outstanding strategic planning in urban development projects.',
+  //     impact: 'Industry leadership recognition',
+  //     icon: Award
+  //   },
+  //   {
+  //     id: 8,
+  //     title: 'Certificate of Incorporation',
+  //     category: 'validations',
+  //     year: 2024,
+  //     type: 'Corporate Registration',
+  //     description: 'Incorporated by CAC under Companies and Allied Matters Act 2020',
+  //     impact: 'Establishes us as a legally recognized entity in Nigeria',
+  //     icon: Building
+  //   },
+  //   {
+  //     id: 9,
+  //     title: 'Taxpayer Identification Number (TIN) Certificate',
+  //     category: 'validations',
+  //     year: 2024,
+  //     type: 'Tax Registration',
+  //     description: 'Received TIN 1073069781 from JTB on January 30, 2024',
+  //     impact: 'Enables fulfillment of tax obligations in Nigeria.',
+  //     icon: FileText
+  //   },
+  //   {
+  //     id: 10,
+  //     title: 'Educational Program Accreditation',
+  //     category: 'validations',
+  //     year: 2022,
+  //     type: 'Program Certification',
+  //     description: 'Accredited training programs for next-generation engineers.',
+  //     impact: 'Training 500+ engineers annually',
+  //     icon: GraduationCap
+  //   }
+  // ];
 
   const filteredCertifications = certifications.filter(cert => 
     filter === 'all' || cert.category === filter
