@@ -9,28 +9,28 @@ import Carousel from "../components/Carousel";
 
 const featuredMedia = [
   {
-    type: "article",
-    title: "The Future of Civic Architecture in Africa",
-    excerpt: "How strategic infrastructure design can transform entire communities and create lasting social change.",
-    readTime: "8 min read",
-    date: "Dec 15, 2024",
-    image: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab"
+    type: "brief",
+    title: "Meridian Platform Executive Brief",
+    excerpt: "The Meridian Sovereign Platform is a sovereign-grade digital infrastructure purpose-built to decentralize data collection while centralizing insight, serving as a multi-sectoral tool for health, humanitarian aid, logistics, and policy governance.",
+    readTime: "3 min read",
+    date: "Dec 10, 2024",
+    image: "meridian.png"
   },
   {
     type: "video",
-    title: "Dialogue with Minister of Youth Development",
-    excerpt: "Strategic conversation on youth empowerment and national development priorities.",
-    duration: "45 min",
-    date: "Dec 8, 2024",
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b"
+    title: "RCHP: Community Engagement and Healthcare Outreach in Rural Nigeria",
+    excerpt: "A visual insight into the Rural Communities Healthcare Project (RCHP), showcasing direct community engagement and healthcare delivery in rural Nigerian communities with PAIGAS and Tyche & Ares Ltd.",
+    duration: "10 min",
+    date: "Jan 15, 2025",
+    image: "rchp img.png"
   },
   {
     type: "gallery",
-    title: "RCHP Project Documentation",
-    excerpt: "Visual journey through our rural healthcare transformation initiative.",
-    count: "24 images",
-    date: "Dec 12, 2024",
-    image: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f"
+    title: "Securing Partnerships at Political and Diplomatic Level",
+    excerpt: "Key figures including Johannes Ofili (CEO/MD Tyche & Ares Ltd.), Ambassador Martin Uhomoibhi (President PAIGAS), Senator Ned Nwoko, and Sylvanus Fihke engaged in discussions to secure political and diplomatic partnerships.",
+    count: "1 image",
+    date: "July 20, 2025",
+    image: "P&D level.jpeg"
   }
 ];
 
