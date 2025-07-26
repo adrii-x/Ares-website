@@ -244,11 +244,11 @@ const Media = () => {
           </div>
 
           {/* Content Grid */}
-          <div className="masonry-grid">
+          <div className="masonry-grid ">
             {mediaContent[activeTab as keyof typeof mediaContent].map((item, index) => {
               const IconComponent = getIcon(item.type);
               return (
-                <div key={index} className="premium-card hover-lift group cursor-pointer max-w-lg">
+                <div key={index} className="premium-card hover-lift group cursor-pointer max-w-lg mx-auto">
                   <div className="relative mb-6 overflow-hidden rounded-lg">
                     <img
                       src={item.image}
